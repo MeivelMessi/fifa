@@ -16,7 +16,6 @@ function App() {
   useEffect(() => {
     let savedMatches = []
     axios.get('https://fifabackend-production-28be.up.railway.app/fifa').then((res) => {
-      console.log('res', res.data)
       savedMatches = res?.data || []
       setMatches(savedMatches)
       setLoading(false)
@@ -24,10 +23,6 @@ function App() {
       console.log('Error while get record', err)
       setLoading(false)
     })
-    console.log('savedMatches', savedMatches)
-    if (savedMatches) {
-      console.log('savedMatches ===', savedMatches)
-    }
   }, [])
 
 
@@ -164,7 +159,7 @@ function App() {
           <RotatingLines
             strokeColor="#09afe6ff"
             strokeWidth="5"
-            animationDuration="1"
+            animationDuration="0.50"
             width="96"
             visible={true}
           />
