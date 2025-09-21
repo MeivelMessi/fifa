@@ -202,7 +202,6 @@ function App() {
                   <input
                     type="number"
                     min="0"
-                    max="20"
                     value={formData.ziva_score}
                     onChange={(e) => setFormData(prev => ({ ...prev, ziva_score: e.target.value }))}
                     className="apple-input"
@@ -216,7 +215,6 @@ function App() {
                   <input
                     type="number"
                     min="0"
-                    max="20"
                     value={formData.anirudh_score}
                     onChange={(e) => setFormData(prev => ({ ...prev, anirudh_score: e.target.value }))}
                     className="apple-input"
